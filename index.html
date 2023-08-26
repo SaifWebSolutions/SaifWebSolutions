@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaifWebSolutions - Freelance Web Developer</title>
+    <style>
+        /* Reset styles and basic typography */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        nav ul li a.active {
+            color: #aaa;
+        }
+
+        /* Hero section styles */
+        #hero {
+            background-image: url('saif.jpeg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Section styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .section-content p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Services styles */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        .service h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Contact section styles */
+        #contact {
+            background-color: #f9f9f9;
+        }
+
+        #contact .section-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact .whatsapp-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        #contact .whatsapp-image {
+            max-width: 100px;
+            display: block;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SaifWebSolutions</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Saif</h1>
+            <p>A passionate freelance web developer based in Egypt.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Hello! I'm Saif, a dedicated freelance web developer based in the vibrant city of Cairo, Egypt. With a passion for innovation and a keen eye for design, I specialize in creating captivating websites that seamlessly merge aesthetic appeal with robust functionality.</p>
+
+            <p>My journey into the world of web development began with a curiosity to understand how the digital landscape works. Over the years, I've honed my skills in both front-end and back-end technologies, allowing me to craft comprehensive web solutions that empower businesses and individuals to thrive online.</p>
+
+            <p>As a tech enthusiast, I'm constantly staying updated with the latest industry trends and best practices. This commitment to growth ensures that my clients receive modern, future-proof websites that stand out in the competitive digital arena.</p>
+
+            <p>My approach to every project is rooted in collaboration and clear communication. I believe in understanding your unique goals and translating them into digital experiences that resonate with your audience. Whether it's a dynamic e-commerce platform or an elegant portfolio site, I take pride in bringing your vision to life.</p>
+
+            <p>When I'm not immersed in coding and designing, you can find me exploring Cairo's rich history, savoring traditional Egyptian cuisine, or enjoying a leisurely stroll along the Nile. Feel free to reach out to me for a chat about your next web project or simply to share your favorite travel stories!</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-content">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Web Development</h3>
+                    <p>From conceptualization to implementation, I build websites that resonate with your vision. Whether it's an e-commerce platform, portfolio site, or anything in between, I ensure your online presence stands out.</p>
+                </div>
+                <div class="service">
+                    <h3>Full-Stack Development</h3>
+                    <p>I have expertise in both front-end and back-end technologies, allowing me to create comprehensive and feature-rich web applications that meet your business needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Static Websites</h3>
+                    <p>Need a clean and informative website? I craft static websites that load quickly, are easy to navigate, and provide your visitors with a memorable experience.</p>
+                </div>
+                <div class="service">
+                    <h3>PDF Conversion</h3>
+                    <p>I offer reliable PDF conversion services, turning your Microsoft documents into professional PDF files. Whether it's Word, Excel, or PowerPoint, I ensure your content remains intact and accessible.</p>
+                </div>
+                <div class="service">
+                    <h3>Video Editing</h3>
+                    <p>Captivate your audience with professionally edited videos. Whether it's trimming, transitions, or adding special effects, I enhance your videos to convey your message effectively.</p>
+                </div>
+                <div class="service">
+                    <h3>Animated Videos</h3>
+                    <p>Want to tell your story through animation? I create engaging animated videos that explain concepts, products, or services in a visually appealing and engaging manner.</p>
+                </div>
+                <div class="service">
+                    <h3>Content Services</h3>
+                    <p>Blog Posts: I provide well-researched and engaging blog posts on a variety of topics, tailored to your target audience.</p>
+                    <p>Transcription: Need your audio or video content transcribed? I accurately transcribe your content into written form for various purposes.</p>
+                    <p>Video Subtitles: Reach a wider audience by adding subtitles to your videos. I ensure your message is conveyed clearly to viewers around the globe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-content">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out to me on WhatsApp:</p>
+            <div class="whatsapp-link">
+                <a href="https://wa.me/601127440914">
+                    <img src="whatsapp1.png" alt="WhatsApp" class="whatsapp-image">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 SaifWebSolutions</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active navigation link
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                    const id = section.getAttribute('id');
+                    document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    const id = section.getAttribute('id');
+                    document.querySelector(`nav ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
