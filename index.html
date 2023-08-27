@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SaifWebSolutions - Freelance Web Developer</title>
     <style>
-        /* Reset styles and basic typography */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,7 +14,7 @@
             color: #333;
         }
 
-        /* Header styles */
+        
         header {
             background-color: #222;
             color: white;
@@ -57,7 +57,7 @@
             color: #aaa;
         }
 
-        /* Hero section styles */
+        
         #hero {
             background-image: url('saif.jpeg');
             background-size: cover;
@@ -100,7 +100,7 @@
             background-color: #c0392b;
         }
 
-        /* Section styles */
+        
         section {
             padding: 60px 0;
         }
@@ -123,7 +123,7 @@
             line-height: 1.6;
         }
 
-        /* Services styles */
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -154,7 +154,7 @@
             color: #333;
         }
 
-        /* Contact section styles */
+        
         #contact {
             background-color: #f9f9f9;
         }
@@ -176,7 +176,7 @@
             display: block;
         }
 
-        /* Footer styles */
+        
         footer {
             background-color: #222;
             color: white;
@@ -184,7 +184,7 @@
             padding: 10px;
         }
 
-        /* Responsive styles for smaller screens */
+        
         @media (max-width: 768px) {
             header {
                 padding: 10px;
@@ -218,8 +218,8 @@
                 margin: 5px 0;
             }
 
-            /* Other responsive styles */
-            /* ... */
+            
+            
         }
     </style>
 </head>
@@ -321,7 +321,7 @@
 </footer>
 
 <script>
-    // Smooth scrolling
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -331,7 +331,16 @@
         });
     });
 
-    // Mobile navigation
+
+    const cvDownloadLink = document.getElementById('cv-download');
+    cvDownloadLink.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = 'MMycv.pdf';
+        link.download = 'Saif_CV.pdf';
+        link.click();
+    });
+
+    
     const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.querySelector('nav ul');
 
@@ -339,7 +348,7 @@
         navMenu.classList.toggle('active');
     });
 
-    // Highlight active navigation link
+    
     window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section');
         sections.forEach(section => {
