@@ -331,15 +331,6 @@
         });
     });
 
-
-    const cvDownloadLink = document.getElementById('cv-download');
-    cvDownloadLink.addEventListener('click', () => {
-        const link = document.createElement('a');
-        link.href = 'MMycv.pdf';
-        link.download = 'Saif_CV.pdf';
-        link.click();
-    });
-
     
     const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.querySelector('nav ul');
@@ -361,6 +352,16 @@
                 document.querySelector(`nav ul li a[href="#${id}"]`).classList.remove('active');
             }
         });
+    });
+</script>
+<script>
+
+    const cvDownloadLink = document.getElementById('cv-download');
+    cvDownloadLink.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = 'MMycv.pdf';
+        link.download = 'Saif_CV.pdf';
+        link.click();
     });
 </script>
 </body>
