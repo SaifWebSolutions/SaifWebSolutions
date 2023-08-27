@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SaifWebSolutions - Freelance Web Developer</title>
     <style>
-        
+        /* Reset styles and basic typography */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,7 +14,7 @@
             color: #333;
         }
 
-        
+        /* Header styles */
         header {
             background-color: #222;
             color: white;
@@ -57,7 +57,7 @@
             color: #aaa;
         }
 
-        
+        /* Hero section styles */
         #hero {
             background-image: url('saif.jpeg');
             background-size: cover;
@@ -93,13 +93,14 @@
             letter-spacing: 1px;
             transition: background-color 0.3s ease-in-out;
             display: inline-block;
+            
         }
 
         .btn:hover {
             background-color: #c0392b;
         }
 
-        
+        /* Section styles */
         section {
             padding: 60px 0;
         }
@@ -122,7 +123,7 @@
             line-height: 1.6;
         }
 
-        
+        /* Services styles */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -153,7 +154,7 @@
             color: #333;
         }
 
-        
+        /* Contact section styles */
         #contact {
             background-color: #f9f9f9;
         }
@@ -175,7 +176,7 @@
             display: block;
         }
 
-    
+        /* Footer styles */
         footer {
             background-color: #222;
             color: white;
@@ -183,7 +184,7 @@
             padding: 10px;
         }
 
-        
+        /* Responsive styles for smaller screens */
         @media (max-width: 768px) {
             header {
                 padding: 10px;
@@ -217,8 +218,8 @@
                 margin: 5px 0;
             }
 
-            
-            
+            /* Other responsive styles */
+            /* ... */
         }
     </style>
 </head>
@@ -238,15 +239,18 @@
     <section id="hero">
         <div class="hero-content">
             <h1>Hello, I'm Saif</h1>
-            <p>A passionate freelance web developer based in Egypt.</p>
+            <p>A passionate freelance web developer based in Malaysia.</p>
             <a href="#contact" class="btn">Get in Touch</a>
+            <a href="MMycv.pdf" class="btn" download>Get My CV</a>
         </div>
     </section>
+
+
 
     <section id="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <p>Hello! I'm Saif, a dedicated freelance web developer based in the vibrant city of Cairo, Egypt. With a passion for innovation and a keen eye for design, I specialize in creating captivating websites that seamlessly merge aesthetic appeal with robust functionality.</p>
+            <p>Hello! I'm Saif, a dedicated freelance web developer based in the vibrant city of Johor, Malaysia. With a passion for innovation and a keen eye for design, I specialize in creating captivating websites that seamlessly merge aesthetic appeal with robust functionality.</p>
 
             <p>My journey into the world of web development began with a curiosity to understand how the digital landscape works. Over the years, I've honed my skills in both front-end and back-end technologies, allowing me to craft comprehensive web solutions that empower businesses and individuals to thrive online.</p>
 
@@ -257,6 +261,7 @@
             <p>When I'm not immersed in coding and designing, you can find me exploring Cairo's rich history, savoring traditional Egyptian cuisine, or enjoying a leisurely stroll along the Nile. Feel free to reach out to me for a chat about your next web project or simply to share your favorite travel stories!</p>
         </div>
     </section>
+ 
 
     <section id="services">
         <div class="section-content">
@@ -308,43 +313,46 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 SaifWebSolutions</p>
-    </footer>
 
-    <script>
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+    
+
+<footer>
+    <p>&copy; 2023 SaifWebSolutions</p>
+</footer>
+
+<script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
+    });
 
-        
-        const menuIcon = document.querySelector('.menu-icon');
-        const navMenu = document.querySelector('nav ul');
+    // Mobile navigation
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('nav ul');
 
-        menuIcon.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+    menuIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Highlight active navigation link
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                const id = section.getAttribute('id');
+                document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
+            } else {
+                const id = section.getAttribute('id');
+                document.querySelector(`nav ul li a[href="#${id}"]`).classList.remove('active');
+            }
         });
-
-        
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
-                    const id = section.getAttribute('id');
-                    document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
-                } else {
-                    const id = section.getAttribute('id');
-                    document.querySelector(`nav ul li a[href="#${id}"]`).classList.remove('active');
-                }
-            });
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
