@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SaifWebSolutions - Freelance Web Developer</title>
+    <title>Seifeldin Taha Abdelrahim Taha - Personal Profile</title>
     <style>
-        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
             color: #333;
         }
 
-        
         header {
             background-color: #222;
             color: white;
@@ -26,7 +24,7 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
         }
 
@@ -53,20 +51,36 @@
             font-weight: bold;
         }
 
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+
         nav ul li a.active {
             color: #aaa;
         }
 
-        
         #hero {
             background-image: url('saif.jpeg');
             background-size: cover;
             color: white;
             text-align: center;
             padding: 250px 0;
+            position: relative;
+        }
+
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
 
         .hero-content {
+            position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -93,14 +107,12 @@
             letter-spacing: 1px;
             transition: background-color 0.3s ease-in-out;
             display: inline-block;
-            
         }
 
         .btn:hover {
             background-color: #c0392b;
         }
 
-        
         section {
             padding: 60px 0;
         }
@@ -123,38 +135,38 @@
             line-height: 1.6;
         }
 
-        
-        .services-grid {
+        .skills-grid, .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-top: 30px;
+            text-align: left;
         }
 
-        .service {
+        .skill, .experience {
             background-color: #FFDAB9;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
             transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
-        .service:hover {
+        .skill:hover, .experience:hover {
             transform: translateY(-5px);
             background-color: #F4A460;
         }
 
-        .service h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #333;
+        .game-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        
+        #gameCanvas {
+            border: 1px solid #333;
+        }
+
         #contact {
             background-color: #f9f9f9;
         }
@@ -176,28 +188,58 @@
             display: block;
         }
 
-        
         footer {
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+            position: relative;
         }
 
-        
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer .social-icons a:hover {
+            color: #e74c3c;
+        }
+
+        footer .back-to-top {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        footer .back-to-top:hover {
+            background-color: #c0392b;
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 10px;
             }
-            
+
             .logo {
                 font-size: 1.2rem;
             }
-            
+
             .menu-icon {
                 display: block;
             }
-            
+
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -209,97 +251,112 @@
                 border-radius: 5px;
                 box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
             }
-            
+
             nav ul.active {
                 display: flex;
             }
-            
+
             nav ul li {
                 margin: 5px 0;
             }
-
-            
-            
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">SaifWebSolutions</div>
+        <div class="logo">SeifWebSolutions</div>
         <span class="menu-icon">&#9776;</span>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="seif cv.pdf" download>Download CV</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
         <div class="hero-content">
-            <h1>Hello, I'm Saif</h1>
-            <p>A passionate freelance web developer based in Malaysia.</p>
+            <h1>Hello, I'm Seifeldin Taha Abdelrahim Taha</h1>
+            <p>A passionate Network and Security Specialist based in Malaysia.</p>
             <a href="#contact" class="btn">Get in Touch</a>
-            <a href="MMycv.pdf" class="btn" download>Get My CV</a>
         </div>
     </section>
-
-
 
     <section id="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <p>Hello! I'm Saif, a dedicated freelance web developer based in the vibrant city of Johor, Malaysia. With a passion for innovation and a keen eye for design, I specialize in creating captivating websites that seamlessly merge aesthetic appeal with robust functionality.</p>
-
-            <p>My journey into the world of web development began with a curiosity to understand how the digital landscape works. Over the years, I've honed my skills in both front-end and back-end technologies, allowing me to craft comprehensive web solutions that empower businesses and individuals to thrive online.</p>
-
-            <p>As a tech enthusiast, I'm constantly staying updated with the latest industry trends and best practices. This commitment to growth ensures that my clients receive modern, future-proof websites that stand out in the competitive digital arena.</p>
-
-            <p>My approach to every project is rooted in collaboration and clear communication. I believe in understanding your unique goals and translating them into digital experiences that resonate with your audience. Whether it's a dynamic e-commerce platform or an elegant portfolio site, I take pride in bringing your vision to life.</p>
-
+            <p>Hello! I'm Seifeldin Taha Abdelrahim Taha, a dedicated Network and Security Specialist based in the vibrant city of Johor, Malaysia. With a passion for innovation and a keen eye for design, I specialize in creating secure and efficient networks that seamlessly merge aesthetic appeal with robust functionality.</p>
+            <p>My journey into the world of network security began with a curiosity to understand how the digital landscape works. Over the years, I've honed my skills in various network protocols, penetration testing, and full-stack development, allowing me to craft comprehensive web solutions that empower businesses and individuals to thrive online.</p>
+            <p>As a tech enthusiast, I'm constantly staying updated with the latest industry trends and best practices. This commitment to growth ensures that my clients receive modern, future-proof networks and applications that stand out in the competitive digital arena.</p>
             <p>When I'm not immersed in coding and designing, you can find me exploring Cairo's rich history, savoring traditional Egyptian cuisine, or enjoying a leisurely stroll along the Nile. Feel free to reach out to me for a chat about your next web project or simply to share your favorite travel stories!</p>
         </div>
     </section>
- 
 
-    <section id="services">
+    <section id="skills">
         <div class="section-content">
-            <h2>Services</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <h3>Web Development</h3>
-                    <p>From conceptualization to implementation, I build websites that resonate with your vision. Whether it's an e-commerce platform, portfolio site, or anything in between, I ensure your online presence stands out.</p>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>Networking Protocols</h3>
+                    <p>Proficient in various networking protocols, including TCP/IP, UDP, HTTP, and more.</p>
                 </div>
-                <div class="service">
+                <div class="skill">
+                    <h3>Linux & Kali Linux</h3>
+                    <p>Extensive experience with Linux, particularly Kali Linux for penetration testing.</p>
+                </div>
+                <div class="skill">
+                    <h3>Wi-Fi Cracking</h3>
+                    <p>Skilled in Wi-Fi cracking tools such as Wifite, Airmon, and Bettercap.</p>
+                </div>
+                <div class="skill">
+                    <h3>Spoofing & Bug Scanning</h3>
+                    <p>Expertise in spoofing techniques and scanning for bugs as a pentester.</p>
+                </div>
+                <div class="skill">
                     <h3>Full-Stack Development</h3>
-                    <p>I have expertise in both front-end and back-end technologies, allowing me to create comprehensive and feature-rich web applications that meet your business needs.</p>
+                    <p>Proficient in HTML, CSS, JavaScript, and Node.js for full-stack development.</p>
                 </div>
-                <div class="service">
-                    <h3>Static Websites</h3>
-                    <p>Need a clean and informative website? I craft static websites that load quickly, are easy to navigate, and provide your visitors with a memorable experience.</p>
-                </div>
-                <div class="service">
-                    <h3>PDF Conversion</h3>
-                    <p>I offer reliable PDF conversion services, turning your Microsoft documents into professional PDF files. Whether it's Word, Excel, or PowerPoint, I ensure your content remains intact and accessible.</p>
-                </div>
-                <div class="service">
-                    <h3>Video Editing</h3>
-                    <p>Captivate your audience with professionally edited videos. Whether it's trimming, transitions, or adding special effects, I enhance your videos to convey your message effectively.</p>
-                </div>
-                <div class="service">
-                    <h3>Animated Videos</h3>
-                    <p>Want to tell your story through animation? I create engaging animated videos that explain concepts, products, or services in a visually appealing and engaging manner.</p>
-                </div>
-                <div class="service">
-                    <h3>Content Services</h3>
-                    <p>Blog Posts: I provide well-researched and engaging blog posts on a variety of topics, tailored to your target audience.</p>
-                    <p>Transcription: Need your audio or video content transcribed? I accurately transcribe your content into written form for various purposes.</p>
-                    <p>Video Subtitles: Reach a wider audience by adding subtitles to your videos. I ensure your message is conveyed clearly to viewers around the globe.</p>
+                <div class="skill">
+                    <h3>Burp Suite & Metasploit</h3>
+                    <p>Hands-on experience with Burp Suite and Metasploit for penetration testing.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="experience">
+        <div class="section-content">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience">
+                    <h3>Network and Security Specialist</h3>
+                    <p>2 years of professional experience in network and security management.</p>
+                </div>
+                <div class="experience">
+                    <h3>ChatGPT Integration</h3>
+                    <p>2+ years of experience in integrating and working with ChatGPT.</p>
+                </div>
+                <div class="experience">
+                    <h3>Node.js Development</h3>
+                    <p>1 year of experience in developing applications with Node.js.</p>
+                </div>
+                <div class="experience">
+                    <h3>Freelance Projects</h3>
+                    <p>Worked on various freelance projects, including LanguageAcademy and more, providing full-stack development services.</p>
+                </div>
+                <div class="experience">
+                    <h3>Business Owner</h3>
+                    <p>Currently managing my own business, SwitchPlay Zone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
 
     <section id="contact">
         <div class="section-content">
@@ -314,55 +371,220 @@
     </section>
 
 
-    
 
-<footer>
-    <p>&copy; 2023 SaifWebSolutions</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Seifeldin Taha Abdelrahim Taha. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="back-to-top">&#8679;</div>
+    </footer>
 
-<script>
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
 
-    
-    const menuIcon = document.querySelector('.menu-icon');
-    const navMenu = document.querySelector('nav ul');
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu = document.querySelector('nav ul');
 
-    menuIcon.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-
-    
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
-                const id = section.getAttribute('id');
-                document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
-            } else {
-                const id = section.getAttribute('id');
-                document.querySelector(`nav ul li a[href="#${id}"]`).classList.remove('active');
-            }
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
-    });
-</script>
-<script>
 
-    const cvDownloadLink = document.getElementById('cv-download');
-    cvDownloadLink.addEventListener('click', () => {
-        const link = document.createElement('a');
-        link.href = 'MMycv.pdf';
-        link.download = 'Saif_CV.pdf';
-        link.click();
-    });
-</script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                    const id = section.getAttribute('id');
+                    document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    const id = section.getAttribute('id');
+                    document.querySelector(`nav ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            });
+        });
+
+        const backToTopButton = document.querySelector('.back-to-top');
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+/*
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        let ballRadius = 10;
+        let x = canvas.width / 2;
+        let y = canvas.height - 30;
+        let dx = 2;
+        let dy = -2;
+        let paddleHeight = 10;
+        let paddleWidth = 75;
+        let paddleX = (canvas.width - paddleWidth) / 2;
+        let rightPressed = false;
+        let leftPressed = false;
+        let brickRowCount = 3;
+        let brickColumnCount = 5;
+        let brickWidth = 75;
+        let brickHeight = 20;
+        let brickPadding = 10;
+        let brickOffsetTop = 30;
+        let brickOffsetLeft = 30;
+        let score = 0;
+        let lives = 3;
+
+        const bricks = [];
+        for(let c = 0; c < brickColumnCount; c++) {
+            bricks[c] = [];
+            for(let r = 0; r < brickRowCount; r++) {
+                bricks[c][r] = { x: 0, y: 0, status: 1 };
+            }
+        }
+
+        document.addEventListener("keydown", keyDownHandler);
+        document.addEventListener("keyup", keyUpHandler);
+        document.addEventListener("mousemove", mouseMoveHandler);
+
+        function keyDownHandler(e) {
+            if(e.key == "Right" || e.key == "ArrowRight") {
+                rightPressed = true;
+            } else if(e.key == "Left" || e.key == "ArrowLeft") {
+                leftPressed = true;
+            }
+        }
+
+        function keyUpHandler(e) {
+            if(e.key == "Right" || e.key == "ArrowRight") {
+                rightPressed = false;
+            } else if(e.key == "Left" || e.key == "ArrowLeft") {
+                leftPressed = false;
+            }
+        }
+
+        function mouseMoveHandler(e) {
+            const relativeX = e.clientX - canvas.offsetLeft;
+            if(relativeX > 0 && relativeX < canvas.width) {
+                paddleX = relativeX - paddleWidth / 2;
+            }
+        }
+
+        function collisionDetection() {
+            for(let c = 0; c < brickColumnCount; c++) {
+                for(let r = 0; r < brickRowCount; r++) {
+                    const b = bricks[c][r];
+                    if(b.status == 1) {
+                        if(x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+                            dy = -dy;
+                            b.status = 0;
+                            score++;
+                            if(score == brickRowCount * brickColumnCount) {
+                                alert("YOU WIN, CONGRATULATIONS!");
+                                document.location.reload();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawBricks() {
+            for(let c = 0; c < brickColumnCount; c++) {
+                for(let r = 0; r < brickRowCount; r++) {
+                    if(bricks[c][r].status == 1) {
+                        const brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
+                        const brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        ctx.beginPath();
+                        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                        ctx.fillStyle = "#0095DD";
+                        ctx.fill();
+                        ctx.closePath();
+                    }
+                }
+            }
+        }
+
+        function drawScore() {
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "#0095DD";
+            ctx.fillText("Score: " + score, 8, 20);
+        }
+
+        function drawLives() {
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "#0095DD";
+            ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBricks();
+            drawBall();
+            drawPaddle();
+            drawScore();
+            drawLives();
+            collisionDetection();
+
+            if(x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+                dx = -dx;
+            }
+
+            if(y + dy < ballRadius) {
+                dy = -dy;
+            } else if(y + dy > canvas.height - ballRadius) {
+                if(x > paddleX && x < paddleX + paddleWidth) {
+                    dy = -dy;
+                } else {
+                    lives--;
+                    if(!lives) {
+                        alert("GAME OVER");
+                        document.location.reload();
+                    } else {
+                        x = canvas.width / 2;
+                        y = canvas.height - 30;
+                        dx = 3;
+                        dy = -3;
+                        paddleX = (canvas.width - paddleWidth) / 2;
+                    }
+                }
+            }
+
+            if(rightPressed && paddleX < canvas.width - paddleWidth) {
+                paddleX += 7;
+            } else if(leftPressed && paddleX > 0) {
+                paddleX -= 7;
+            }
+
+            x += dx;
+            y += dy;
+            requestAnimationFrame(draw);
+        }
+
+      */  draw();
+    </script>
 </body>
 </html>
